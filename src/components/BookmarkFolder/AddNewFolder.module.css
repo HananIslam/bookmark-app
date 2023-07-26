@@ -1,0 +1,13 @@
+.addNewFolder {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-size: 30px;
+    
+  }
+
+  .addNewFolder:hover {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer; /* Change the cursor to a hand on hover */
+  }
+  

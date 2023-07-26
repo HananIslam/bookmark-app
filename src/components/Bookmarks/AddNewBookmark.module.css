@@ -1,0 +1,13 @@
+
+.addNewBookmark {
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer; /* Change the cursor to a hand on hover */
+    transition: background-color 0.3s; /* Add a transition for smooth color change */
+  }
+  
+  .addNewBookmark:hover {
+    background-color: #ffe6dc; /* Change the background color to white on hover */
+  }
+  

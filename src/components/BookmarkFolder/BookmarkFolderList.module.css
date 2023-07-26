@@ -1,0 +1,18 @@
+.bookmarkFoldersList {
+  margin-top: 8rem;
+  margin-right: 8rem;
+  margin-left: 8rem;
+}
+.bookmarkFolders {
+  display: flex;
+  flex-wrap: wrap; /* Add this line to allow items to wrap to the next line */
+  justify-content: flex-start;
+}
+
+.bookmarkFolders > div {
+  background-color: #c7c7c7;
+  flex-basis: calc(
+    33.33% - 20px
+  ); /* Adjust the width to display three items per row */
+  margin: 10px;
+}
