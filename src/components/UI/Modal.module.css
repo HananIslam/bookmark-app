@@ -10,6 +10,10 @@
   .content{
     margin: 1rem;
   }
+  hr{
+    margin: 0 -1rem 0 -1rem;
+    color: rgb(185, 185, 185);
+  }
   .modal {
     position: fixed;
     top: 15vh;

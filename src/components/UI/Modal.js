@@ -12,6 +12,7 @@ const ModalOverlay = (props) => {
     <div className={classes.modal}>
       <div className={classes.content}>
       <h3>{props.heading}</h3>
+      <hr></hr>
         {props.children}</div>
     </div>
   );
