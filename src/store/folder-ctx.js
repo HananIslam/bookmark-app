@@ -6,7 +6,8 @@ const Folderctx = React.createContext({
   addBookmark: (UrlTitle, Url, folderId) => {},
   removeBookmark: (id) => {},
   setChangeHappened:()=>{},
-  editBookmark:(UrlTitle, Url, folderId, urlId)=>{}
+  editBookmark:(UrlTitle, Url, folderId, urlId)=>{},
+  renameFolder:(folderName, folderId)=>{}
 });
 
 export default Folderctx;

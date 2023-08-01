@@ -1,22 +1,10 @@
 import { Fragment, useState, useEffect, useRef } from "react";
 import classes from "./FolderOptions.module.css";
-import Modal from "../UI/Modal";
-import AddNewBookmarkForm from "../Bookmarks/AddNewBookmarkForm";
 
 const FolderOptions = (props) => {
-  const [addBookmarkClicked, setAddBookmarkClicked] = useState(false);
   const [componentMounted, setComponentMounted] = useState(false); // State variable to track component mounting
   const containerRef = useRef(null); // Create a reference to the optionContainer div
 
-  const addNewBookmarkClickHandler = () => {
-    setAddBookmarkClicked(true);
-  };
-
-  const AddBookmarkCloseHandler = () => {
-    setAddBookmarkClicked(false);
-  };
-
-  const heading = "Add new bookmark in " + props.folderName + " folder";
 
   useEffect(() => {
     // Function to handle click outside the optionContainer
@@ -43,15 +31,11 @@ const FolderOptions = (props) => {
   return (
     <Fragment>
       <div className={classes.optionContainer} ref={containerRef}>
-        <button onClick={addNewBookmarkClickHandler}>Add Bookmark</button>
-        <button>Edit</button>
-        <button>Delete</button>
+        <button onClick={props.onAddBookmarkClicked}>Add Bookmark</button>
+        <button onClick={props.onRenameFolderClicked}>Rename</button>
+        <button onClick={props.onDeleteFolderClicked}>Delete</button>
       </div>
-      {addBookmarkClicked && (
-        <Modal onClose={AddBookmarkCloseHandler} heading={heading}>
-          <AddNewBookmarkForm folderId={props.folderId} onClose={AddBookmarkCloseHandler} />
-        </Modal>
-      )}
+      
     </Fragment>
   );
 };

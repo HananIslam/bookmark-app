@@ -45,6 +45,36 @@ const FolderProvider = (props) => {
     }
   };
 
+  const renameFolder = async (folderName, folderId) => {
+    const firebaseUrl = `https://bookmarkvault-7c971-default-rtdb.firebaseio.com/BookMarkFolders/${folderId}.json`;
+  
+    try {
+      const response = await fetch(firebaseUrl, {
+        method: "PATCH", // Use PATCH method to update the existing folder
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          FolderName: folderName,
+        }),
+      });
+  
+      if (!response.ok) {
+        throw new Error("Failed to rename folder in Firebase.");
+      }
+  
+      setNotificationJsx({
+        myJSXElement: <p>Folder Renamed Successfully</p>,
+      });
+      showNotificationHandler();
+      return true; // Folder renamed successfully
+    } catch (error) {
+      console.error("Error renaming folder in Firebase:", error);
+      return false;
+    }
+  };
+  
+
   const removeFolder = async (folderId) => {
     const firebaseUrl = `https://bookmarkvault-7c971-default-rtdb.firebaseio.com/BookMarkFolders/${folderId}.json`;
 
@@ -193,7 +223,8 @@ const FolderProvider = (props) => {
         removeFolder,
         addBookmark,
         removeBookmark,
-        editBookmark
+        editBookmark,
+        renameFolder
       }}
     >
       {props.children}

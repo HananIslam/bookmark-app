@@ -1,25 +1,15 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import classes from "./BookmarkFolder.module.css";
 import BookmarkList from "../Bookmarks/BookmarkList";
-import FolderOptions from "./FolderOptions";
+import FolderOptionsButton from "./FolderOptions/FolderOptionsButton";
 
 const BookmarkFolder = (props) => {
-  const [optionClicked, setOptionClicked] = useState(false);
-  const optionClickHandler = () => {
-    setOptionClicked(true);
-  };
-  const optionCloseHander = () => {
-    setOptionClicked(false);
-  };
   return (
     <Fragment>
       <div>
         <div className={classes.bookmarkFolder}>
           <h2 className={classes.heading}>{props.name}</h2>
-          <span >
-            {optionClicked && <FolderOptions onClose={optionCloseHander} folderId={props.id} />}
-            {!optionClicked && <span onClick={optionClickHandler} className={classes.ellipsis}>…</span>}
-          </span>
+          <FolderOptionsButton folderId={props.id} folderName={props.name} />
         </div>
         <BookmarkList
           folderName={props.name}

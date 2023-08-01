@@ -22,7 +22,7 @@ const AddNewBookmark = (props) => {
       </li>
       {addBookmarkClicked && (
         <Modal onClose={AddBookmarkCloseHandler} heading={heading}>
-          <AddNewBookmarkForm folderId={props.folderId} onClose={AddBookmarkCloseHandler} />
+          <AddNewBookmarkForm folderId={props.folderId} titleValue="" urlValue="" onClose={AddBookmarkCloseHandler} />
         </Modal>
       )}
     </Fragment>
