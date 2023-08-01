@@ -7,7 +7,5 @@
     transition: background-color 0.3s; /* Add a transition for smooth color change */
   }
   
-  .addNewBookmark:hover {
-    background-color: #ffe6dc; /* Change the background color to white on hover */
-  }
+
   

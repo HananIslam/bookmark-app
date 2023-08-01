@@ -1,13 +1,13 @@
 import React from "react";
-import { Fragment } from "react";
 import Header from "./components/layout/Header";
 import BookmarkFolderList from "./components/BookmarkFolder/BookmarkFolderList";
+import FolderProvider from "./store/FolderProvider";
 function App() {
   return (
-    <Fragment>
+    <FolderProvider>
       <Header />
       <BookmarkFolderList/>
-    </Fragment>
+    </FolderProvider>
   );
 }
 

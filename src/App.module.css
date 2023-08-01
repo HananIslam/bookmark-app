@@ -1,0 +1,8 @@
+.bg1{
+    margin: 0;
+    background-image: url('/Users/hannanislam/Documents/New React/bookmark app/src/assets/pexels-pixabay-531880.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: -5rem ;
+    margin-bottom: -5rem;
+}

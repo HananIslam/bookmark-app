@@ -1,10 +1,9 @@
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import AddNewFolder from "./AddNewFolder";
 import BookmarkFolder from "./BookmarkFolder";
 import classes from "./BookmarkFolderList.module.css";
 const BookmarkFolderList = (props) => {
   const [BookMarkFoldersArray, setBookMarkFoldersArray] = useState([]);
-
   const fetchBookmarkDataFromFirebase = async () => {
     const firebaseUrl =
       "https://bookmarkvault-7c971-default-rtdb.firebaseio.com/BookMarkFolders.json";
@@ -17,21 +16,21 @@ const BookmarkFolderList = (props) => {
       }
 
       const data = await response.json();
-      console.log(data);
-      console.log("running");
       // Process the data to the desired format
       const bookmarkFolders = Object.entries(data).map(([id, folderData]) => ({
         id,
         name: folderData.FolderName,
-        bookmarks: Object.entries(folderData.BookMarks).map(
-          ([bookmarkId, bookmark]) => ({
-            id: bookmarkId,
-            title: bookmark.title,
-            url: bookmark.url,
-          })
-        ),
+        bookmarks: folderData.BookMarks
+          ? Object.entries(folderData.BookMarks).map(
+              ([bookmarkId, bookmark]) => ({
+                id: bookmarkId,
+                title: bookmark.title,
+                url: bookmark.url,
+              })
+            )
+          : [], // Set an empty array if BookMarks doesn't exist
       }));
-
+      bookmarkFolders.reverse();
       // Return the processed data
       setBookMarkFoldersArray(bookmarkFolders);
     } catch (error) {
@@ -43,6 +42,7 @@ const BookmarkFolderList = (props) => {
   useEffect(() => {
     fetchBookmarkDataFromFirebase();
   }, []);
+  console.log();
 
   const bookmarkFolders = BookMarkFoldersArray.map((folder) => (
     <BookmarkFolder
@@ -54,15 +54,12 @@ const BookmarkFolderList = (props) => {
   ));
 
   return (
-    <Fragment>
       <div className={classes.bookmarkFoldersList}>
         <div className={classes.bookmarkFolders}>
           {bookmarkFolders}
-          <AddNewFolder />
-          {console.log("BookMarkFoldersArray")}
         </div>
+        <AddNewFolder />
       </div>
-    </Fragment>
   );
 };
 export default BookmarkFolderList;

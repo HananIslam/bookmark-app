@@ -1,0 +1,27 @@
+.optionContainer {
+  background-color: white;
+  padding: 8px 0 8px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to the container */
+  border-radius: 3px; /* Add border radius for rounded corners */
+  display: flex;
+  flex-direction: column; /* Arrange buttons in a column */
+  align-items: stretch; /* Stretch buttons to take full width */
+  transition: background-color 0.3s ease; /* Add transition for hover effect */
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  right: 20px;
+}
+
+.optionContainer > button {
+  border-radius: 3px; /* Add border radius for rounded corners */
+  cursor: pointer;
+  padding: 8px 24px;
+  background-color: transparent;
+  border: none;
+  width: 100%; /* Make buttons take the full width of the container */
+}
+
+.optionContainer > button:hover {
+  background-color: #f0f0f0; /* Change color on hover to grayish */
+}

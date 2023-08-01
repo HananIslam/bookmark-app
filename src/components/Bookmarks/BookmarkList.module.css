@@ -1,18 +1,43 @@
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Style the list items */
-  ul li {
-    background-color: #ffffff;
-    cursor: pointer;
-    padding: 8px 16px; /* Adjust padding as needed */
-    margin-bottom: 5px; /* Add some spacing between list items */
-    /* Add any other styles you want for list items */
-  }
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  background-color: #ffffff;
+  border-radius: 0.5rem 0.5rem 1rem 1rem;
+}
 
-  ul li:hover {
-    background-color: aliceblue;
-  }
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 16px;
+  /* margin-bottom: 5px; */
+  /* Add any other styles you want for list items */
+}
+
+
+
+ul li > div:first-child {
+  flex-grow: 1;
+}
+ul li:last-child{
+  text-align: center;
+}
+
+ul hr{
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.delete-icon {
+  fill: #999;
+  width: 18px;
+  height: 18px;
+  opacity: 0.5; /* Set the initial opacity */
+  transition: opacity 0.3s; /* Add fade-in transition effect */
+}
+
+ul li:hover .delete-icon {
+  opacity: 1; /* Change the opacity on hover */
+}

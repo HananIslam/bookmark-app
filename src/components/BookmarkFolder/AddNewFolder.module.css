@@ -1,13 +1,25 @@
+/* Your existing CSS styles */
 .addNewFolder {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    font-size: 30px;
-    
-  }
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-size: 20px;
+}
 
-  .addNewFolder:hover {
-    background-color: rgb(255, 255, 255);
-    cursor: pointer; /* Change the cursor to a hand on hover */
-  }
-  
+.addNewFolder:hover {
+  background-color: rgb(255, 255, 255);
+  cursor: pointer; /* Change the cursor to a hand on hover */
+  color: #8a2b06;
+}
+
+/* Additional styles for the round shape and position */
+.addNewFolder {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #8a2b06; /* Change the background color to your preferred color */
+  color: #fff; /* Change the text color to your preferred color */
+}

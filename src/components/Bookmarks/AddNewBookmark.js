@@ -3,6 +3,7 @@ import classes from "./AddNewBookmark.module.css";
 import Modal from "../UI/Modal";
 import AddNewBookmarkForm from "./AddNewBookmarkForm";
 const AddNewBookmark = (props) => {
+
   const [addBookmarkClicked, setAddBookmarkClicked] = useState(false);
   const addNewBookmarkClickHandler = () => {
     setAddBookmarkClicked(true);
@@ -10,6 +11,7 @@ const AddNewBookmark = (props) => {
   const AddBookmarkCloseHandler = () => {
     setAddBookmarkClicked(false);
   };
+  const heading="Add new bookmark in "+ props.folderName + " folder";
   return (
     <Fragment>
       <li
@@ -19,8 +21,8 @@ const AddNewBookmark = (props) => {
         +
       </li>
       {addBookmarkClicked && (
-        <Modal onClose={AddBookmarkCloseHandler} heading="Add New Bookmark">
-          <AddNewBookmarkForm onClose={AddBookmarkCloseHandler}/>
+        <Modal onClose={AddBookmarkCloseHandler} heading={heading}>
+          <AddNewBookmarkForm folderId={props.folderId} onClose={AddBookmarkCloseHandler} />
         </Modal>
       )}
     </Fragment>

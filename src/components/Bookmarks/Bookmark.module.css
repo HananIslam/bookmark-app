@@ -1,0 +1,51 @@
+
+.delete-icon {
+  fill: #999;
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+  opacity: 0; /* Set the initial opacity */
+  transition: opacity 0.3s; /* Add fade-in transition effect */
+}
+
+ li:hover .delete-icon {
+  opacity: 0.8; /* Change the opacity on hover */
+}
+
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-top: 30px;
+}
+
+.actions button {
+  font: inherit;
+  color: #5a1a01;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #ffe6dc;
+  border: 1px solid rgb(220, 216, 216);
+}
+.actions button {
+  border: 1px solid rgb(220, 216, 216);
+}
+.actions .submit {
+  border: 1px solid #5a1a01;
+  background-color: #5a1a01;
+  color: white;
+}
+
+.actions .submit:hover,
+.actions .submit:active {
+  background-color: #7a2706;
+}
