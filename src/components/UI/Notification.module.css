@@ -2,39 +2,38 @@
 
 .errorBanner {
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     left: 20px;
     display: flex;
     align-items: center;
-    background-color: #f76055da;
-    color: #fff;
-    padding: 8px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* border-left: 10px solid #7f2401; */
+
     animation: fadeInBottomLeft 0.5s ease-out forwards;
     opacity: 0;
+    z-index: 100;
   }
-  
-  .errorBanner span:first-child {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    background-color: #4caf50;
-    border-radius: 50%;
+
+  .green{
+    border-left: 10px solid #0ec704;
+
   }
-  
-  .errorBanner p {
-    margin: 0;
-    font-size: 15px;
+
+  .red{
+    
+      border-left: 10px solid #e60f0f;
   }
+
   
   @keyframes fadeInBottomLeft {
     from {
       opacity: 0;
-      transform: translate(-50%, 50%);
+      transform: translate(-50%, 0);
     }
     to {
       opacity: 1;

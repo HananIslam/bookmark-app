@@ -7,7 +7,10 @@ const Folderctx = React.createContext({
   removeBookmark: (id) => {},
   setChangeHappened:()=>{},
   editBookmark:(UrlTitle, Url, folderId, urlId)=>{},
-  renameFolder:(folderName, folderId)=>{}
+  renameFolder:(folderName, folderId)=>{},
+  BookMarkFoldersArray:[],
+  setNotification:(message, type)=>{},
+  showNotificationHandler:()=>{}
 });
 
 export default Folderctx;

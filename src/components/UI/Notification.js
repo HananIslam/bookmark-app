@@ -1,10 +1,13 @@
-import classes from './Notification.module.css'
+import classes from "./Notification.module.css";
+
 const Notification = (props) => {
+  const notificationType = props.notification.type === "green" ? "green" : "red";
 
   return (
-    <div className={classes.errorBanner}>
-        <span><p>✔</p></span>
-      <span>{props.message}</span>
+    <div
+      className={`${classes.errorBanner} ${classes[notificationType]}`}
+    >
+      <div>{props.notification.message}</div>
     </div>
   );
 };

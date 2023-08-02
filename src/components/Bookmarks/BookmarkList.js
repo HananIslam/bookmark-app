@@ -8,7 +8,7 @@ const BookmarkList = (props) => {
   const bookmarkList = props.bookmarks.map((bookmark) => {
     return (
       <Fragment>
-      <Bookmark key={bookmark.id} id={bookmark.id} title={bookmark.title} url={bookmark.url} />
+      <Bookmark key={bookmark.id} folderId={props.folderId} id={bookmark.id} title={bookmark.title} url={bookmark.url} />
       <hr/>
       </Fragment>
 

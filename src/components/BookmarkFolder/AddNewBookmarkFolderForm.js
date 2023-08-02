@@ -31,7 +31,7 @@ const AddNewBookmarkFolderForm = (props) => {
   return (
     <form className={classes.form} onSubmit={folderSubmitHandler}>
       <div className={classes.control}>
-        <label htmlFor="NewFolder">📁 New Folder Name </label>
+        <label htmlFor="NewFolder">📁 Folder Name </label>
         <input
           type="text"
           id="NewFolder"

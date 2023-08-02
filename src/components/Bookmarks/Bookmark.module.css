@@ -49,3 +49,24 @@
 .actions .submit:active {
   background-color: #7a2706;
 }
+
+.QrCard {
+  display: flex;
+  flex-direction: column; /* Display items in a column */
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.QrCode {
+  /* Apply styles to the QR code container if needed */
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  padding: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.432);
+
+}
+
+.CopyButton {
+  /* Apply styles to the copy button container if needed */
+}

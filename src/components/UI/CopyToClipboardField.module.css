@@ -1,0 +1,36 @@
+.CopyToClipboardField {
+    background-color: gray;
+    border-radius: 5px;
+    margin-top: 25px;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Add space between the input and button */
+    align-items: center; /* Align content vertically in the center */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.242);
+
+}
+  
+  .CopyToClipboardField input {
+    background-color: transparent;
+    color: white; /* Set the text color to white */
+    border: none; /* Remove border */
+    margin-left: 10px;
+    height: 15px;
+    width: 70%;
+  }
+  
+  .CopyToClipboardField button {
+    background-color: #2b2b2b;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 13px;
+    cursor: pointer;
+  }
+
+  .CopyToClipboardField button:hover {
+    background-color: #2b2b2bc0;
+    
+  }
+  

@@ -49,7 +49,7 @@ const FolderOptionsButton = (props) => {
   const headingAddBookmark =
     "Add new bookmark in " + props.folderName + " folder";
   const headingDeleteFolder =
-    "Are you sure to delete " + props.folderName + " permanently";
+    "Are you sure to delete " + props.folderName + " folder permanently";
     const headingrenameFolder="Rename Folder "
 
   return (

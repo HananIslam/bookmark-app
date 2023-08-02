@@ -18,7 +18,7 @@ const AddNewFolder = () => {
       </div>
       {addNewFolderOpened && (
         <Modal onClose={addNewFolderCloseHandler} heading="Add New Folder">
-          {<AddNewBookmarkFolderForm onClose={addNewFolderCloseHandler}/>}
+          {<AddNewBookmarkFolderForm onClose={addNewFolderCloseHandler} folderName=" "/>}
         </Modal>
       )}
     </Fragment>
